@@ -249,7 +249,7 @@ class exports.Rewriter
       # that creates grammatical ambiguities.
       if tag in IMPLICIT_FUNC and @matchTags(i + 1, 'INDENT', null, ':') and
          not @findTagsBackwards(i, ['CLASS', 'EXTENDS', 'IF', 'CATCH',
-          'SWITCH', 'LEADING_WHEN', 'FOR', 'WHILE', 'UNTIL'])
+          'SWITCH', 'LEADING_WHEN', 'FOR', 'WHILE', 'UNTIL', 'სანამ'])
         startImplicitCall i + 1
         stack.push ['INDENT', i + 2]
         return forward(3)
