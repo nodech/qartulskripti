@@ -421,6 +421,8 @@ grammar =
   WhileSource: [
     o 'WHILE Expression',                       -> new While $2
     o 'WHILE Expression WHEN Expression',       -> new While $2, guard: $4
+    o 'როცა Expression',                        -> new While $2
+    o 'როცა Expression WHEN Expression',        -> new While $2, guard: $4
     o 'UNTIL Expression',                       -> new While $2, invert: true
     o 'UNTIL Expression WHEN Expression',       -> new While $2, invert: true, guard: $4
   ]
@@ -591,7 +593,7 @@ operators = [
   ['nonassoc',  'INDENT', 'OUTDENT']
   ['right',     '=', ':', 'COMPOUND_ASSIGN', 'RETURN', 'THROW', 'EXTENDS']
   ['right',     'FORIN', 'FOROF', 'BY', 'WHEN']
-  ['right',     'IF', 'ELSE', 'FOR', 'WHILE', 'UNTIL', 'LOOP', 'SUPER', 'CLASS']
+  ['right',     'IF', 'ELSE', 'FOR', 'WHILE', 'როცა', 'UNTIL', 'LOOP', 'SUPER', 'CLASS']
   ['left',      'POST_IF']
 ]
 
