@@ -477,7 +477,7 @@ IMPLICIT_CALL    = [
 IMPLICIT_UNSPACED_CALL = ['+', '-']
 
 # Tokens that always mark the end of an implicit call for single-liners.
-IMPLICIT_END     = ['POST_IF', 'FOR', 'WHILE', 'UNTIL', 'WHEN', 'BY',
+IMPLICIT_END     = ['POST_IF', 'FOR', 'WHILE', 'UNTIL', 'სანამ', 'WHEN', 'BY',
   'LOOP', 'TERMINATOR']
 
 # Single-line flavors of block expressions that have unclosed endings.
