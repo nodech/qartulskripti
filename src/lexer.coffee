@@ -145,6 +145,7 @@ exports.Lexer = class Lexer
     unless forcedIdentifier
       id  = COFFEE_ALIAS_MAP[id] if id in COFFEE_ALIASES
       tag = switch id
+        when 'თუ'                then 'IF'
         when '!'                 then 'UNARY'
         when '==', '!='          then 'COMPARE'
         when '&&', '||'          then 'LOGIC'
@@ -731,7 +732,6 @@ COFFEE_ALIAS_MAP =
   no   : 'false'
   on   : 'true'
   off  : 'false'
-  'თუ' : 'if'
 
 COFFEE_ALIASES  = (key for key of COFFEE_ALIAS_MAP)
 COFFEE_KEYWORDS = COFFEE_KEYWORDS.concat COFFEE_ALIASES
