@@ -152,6 +152,10 @@ exports.Lexer = class Lexer
         when 'break', 'continue' then 'STATEMENT'
         else  tag
 
+    # Tranlate georgian keywords to LEXER tokens
+    if id in GEORGIAN_ALIASES
+      tag = GEORGIAN_ALIAS_MAP[id]
+
     tagToken = @token tag, id, 0, idLength
     if poppedToken
       [tagToken[2].first_line, tagToken[2].first_column] =
@@ -732,8 +736,13 @@ COFFEE_ALIAS_MAP =
   on   : 'true'
   off  : 'false'
 
-COFFEE_ALIASES  = (key for key of COFFEE_ALIAS_MAP)
-COFFEE_KEYWORDS = COFFEE_KEYWORDS.concat COFFEE_ALIASES
+GEORGIAN_ALIAS_MAP =
+  'სანამ' : 'WHILE'
+
+COFFEE_ALIASES   = (key for key of COFFEE_ALIAS_MAP)
+GEORGIAN_ALIASES = (key for key of GEORGIAN_ALIAS_MAP)
+COFFEE_KEYWORDS  = COFFEE_KEYWORDS.concat COFFEE_ALIASES
+COFFEE_KEYWORDS  = COFFEE_KEYWORDS.concat GEORGIAN_ALIASES
 
 # The list of keywords that are reserved by JavaScript, but not used, or are
 # used by CoffeeScript internally. We throw an error when these are encountered,
