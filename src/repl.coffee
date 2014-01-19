@@ -6,8 +6,8 @@ CoffeeScript = require './coffee-script'
 {merge, updateSyntaxError} = require './helpers'
 
 replDefaults =
-  prompt: 'coffee> ',
-  historyFile: path.join process.env.HOME, '.coffee_history' if process.env.HOME
+  prompt: 'ქართულსკრიპტი> ',
+  historyFile: path.join process.env.HOME, '.qartulskripti_history' if process.env.HOME
   historyMaxInputSize: 10240
   eval: (input, context, filename, cb) ->
     # XXX: multiline hack.
