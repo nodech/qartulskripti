@@ -39,9 +39,10 @@ if require.extensions
 
 # If we're on Node, patch `child_process.fork` so that Coffee scripts are able
 # to fork both CoffeeScript files, and JavaScript files, directly.
+# p.s. qartulskripti already.
 if child_process
   {fork} = child_process
-  binary = require.resolve '../../bin/coffee'
+  binary = require.resolve '../../bin/qartulskripti'
   child_process.fork = (path, args, options) ->
     if helpers.isCoffee path
       unless Array.isArray args
