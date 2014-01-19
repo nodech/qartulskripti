@@ -423,8 +423,6 @@ grammar =
     o 'WHILE Expression WHEN Expression',       -> new While $2, guard: $4
     o 'UNTIL Expression',                       -> new While $2, invert: true
     o 'UNTIL Expression WHEN Expression',       -> new While $2, invert: true, guard: $4
-    o 'სანამ Expression',                       -> new While $2, invert: true
-    o 'სანამ Expression WHEN Expression',       -> new While $2, invert: true, guard: $4
   ]
 
   # The while loop can either be normal, with a block of expressions to execute,
@@ -593,7 +591,7 @@ operators = [
   ['nonassoc',  'INDENT', 'OUTDENT']
   ['right',     '=', ':', 'COMPOUND_ASSIGN', 'RETURN', 'THROW', 'EXTENDS']
   ['right',     'FORIN', 'FOROF', 'BY', 'WHEN']
-  ['right',     'IF', 'ELSE', 'FOR', 'WHILE', 'UNTIL', 'სანამ', 'LOOP', 'SUPER', 'CLASS']
+  ['right',     'IF', 'ELSE', 'FOR', 'WHILE', 'UNTIL', 'LOOP', 'SUPER', 'CLASS']
   ['left',      'POST_IF']
 ]
 
