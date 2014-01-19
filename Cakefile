@@ -15,7 +15,7 @@ unless process.env.NODE_DISABLE_COLORS
 # Built file header.
 header = """
   /**
-   * QartulScript Compiler Based on CoffeeScript Compiler
+   * QartulSkripti Compiler Based on CoffeeScript Compiler
    *
    * Copyright 2014, Nodari Chkuasliedze
    * Released under the MIT License
@@ -30,7 +30,7 @@ build = (cb) ->
 
 # Run a CoffeeScript through our node/coffee interpreter.
 run = (args, cb) ->
-  proc =         spawn 'node', ['bin/coffee'].concat(args)
+  proc =         spawn 'node', ['bin/qartulskripti'].concat(args)
   proc.stderr.on 'data', (buffer) -> console.log buffer.toString()
   proc.on        'exit', (status) ->
     process.exit(1) if status != 0
