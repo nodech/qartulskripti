@@ -15,7 +15,7 @@ unless process.env.NODE_DISABLE_COLORS
 # Built file header.
 header = """
   /**
-   * QartulSkripti Compiler Based on CoffeeScript Compiler
+   * ქარტულ-სკრიპტის კომპილერი
    *
    * Copyright 2014, Nodari Chkuasliedze
    * Released under the MIT License
@@ -42,14 +42,14 @@ log = (message, color, explanation) ->
 
 option '-p', '--prefix [DIR]', 'set the installation prefix for `cake install`'
 
-task 'install', 'install CoffeeScript into /usr/local (or --prefix)', (options) ->
+task 'install', 'დააინსტალირეთ ქართულ-სკრიპტი /usr/local-ში ან გამოიყენეთ --prefix პარამეტრი', (options) ->
   base = options.prefix or '/usr/local'
   lib  = "#{base}/lib/coffee-script"
   bin  = "#{base}/bin"
   node = "~/.node_libraries/coffee-script"
-  console.log   "Installing CoffeeScript to #{lib}"
-  console.log   "Linking to #{node}"
-  console.log   "Linking 'coffee' to #{bin}/coffee"
+  console.log   "ინსტალირდება ქართულ-სკრიპტი #{lib}-ში"
+  console.log   "ილინკება #{node}"
+  console.log   "ილინკება 'qartulskripti' #{bin}/qartulskripti - ში"
   exec([
     "mkdir -p #{lib} #{bin}"
     "cp -rf bin lib LICENSE README package.json src #{lib}"
