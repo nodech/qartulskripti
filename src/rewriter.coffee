@@ -25,6 +25,8 @@ class exports.Rewriter
   # like this. The order of these passes matters -- indentation must be
   # corrected before implicit parentheses can be wrapped around blocks of code.
   rewrite: (@tokens) ->
+    #if @tokens.length < 50
+    #  console.log token for token in @tokens
     @removeLeadingNewlines()
     @closeOpenCalls()
     @closeOpenIndexes()
