@@ -53,7 +53,7 @@ task 'install', 'დააინსტალირეთ ქართულ-ს�
   exec([
     "mkdir -p #{lib} #{bin}"
     "cp -rf bin lib LICENSE README package.json src #{lib}"
-    "ln -sfn #{lib}/bin/coffee #{bin}/coffee"
+    "ln -sfn #{lib}/bin/qartulskripti #{bin}/qartulskripti"
     "ln -sfn #{lib}/bin/cake #{bin}/cake"
     "mkdir -p ~/.node_libraries"
     "ln -sfn #{lib}/lib/coffee-script #{node}"
