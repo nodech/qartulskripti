@@ -738,6 +738,9 @@ COFFEE_ALIAS_MAP =
 
 GEORGIAN_ALIAS_MAP =
   'სანამ' : 'WHILE'
+  'მანამ' : 'UNTIL'
+  'როცა'  : 'FOR'
+  'თუ'    : 'IF'
 
 COFFEE_ALIASES   = (key for key of COFFEE_ALIAS_MAP)
 GEORGIAN_ALIASES = (key for key of GEORGIAN_ALIAS_MAP)
