@@ -719,7 +719,7 @@ JS_KEYWORDS = [
 ]
 
 # CoffeeScript-only keywords.
-COFFEE_KEYWORDS = ['undefined', 'then', 'unless', 'until', 'loop', 'of', 'by', 'when', 'სანამ']
+COFFEE_KEYWORDS = ['undefined', 'then', 'unless', 'until', 'loop', 'of', 'by', 'when']
 
 COFFEE_ALIAS_MAP =
   and  : '&&'

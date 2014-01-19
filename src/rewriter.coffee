@@ -249,7 +249,7 @@ class exports.Rewriter
       # that creates grammatical ambiguities.
       if tag in IMPLICIT_FUNC and @matchTags(i + 1, 'INDENT', null, ':') and
          not @findTagsBackwards(i, ['CLASS', 'EXTENDS', 'IF', 'CATCH',
-          'SWITCH', 'LEADING_WHEN', 'FOR', 'WHILE', 'UNTIL', 'სანამ'])
+          'SWITCH', 'LEADING_WHEN', 'FOR', 'WHILE', 'UNTIL'])
         startImplicitCall i + 1
         stack.push ['INDENT', i + 2]
         return forward(3)
@@ -477,7 +477,7 @@ IMPLICIT_CALL    = [
 IMPLICIT_UNSPACED_CALL = ['+', '-']
 
 # Tokens that always mark the end of an implicit call for single-liners.
-IMPLICIT_END     = ['POST_IF', 'FOR', 'WHILE', 'UNTIL', 'სანამ', 'WHEN', 'BY',
+IMPLICIT_END     = ['POST_IF', 'FOR', 'WHILE', 'UNTIL', 'WHEN', 'BY',
   'LOOP', 'TERMINATOR']
 
 # Single-line flavors of block expressions that have unclosed endings.
