@@ -15,10 +15,9 @@ unless process.env.NODE_DISABLE_COLORS
 # Built file header.
 header = """
   /**
-   * CoffeeScript Compiler v#{CoffeeScript.VERSION}
-   * http://coffeescript.org
+   * QartulScript Compiler Based on CoffeeScript Compiler
    *
-   * Copyright 2011, Jeremy Ashkenas
+   * Copyright 2014, Nodari Chkuasliedze
    * Released under the MIT License
    */
 """
