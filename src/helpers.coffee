@@ -129,10 +129,10 @@ exports.baseFileName = (file, stripExt = no, useWinPathSep = no) ->
   parts.join('.')
 
 # Determine if a filename represents a CoffeeScript file.
-exports.isCoffee = (file) -> /\.((lit)?coffee|coffee\.md)$/.test file
+exports.isCoffee = (file) -> /\.((lit)?coffee|coffee\.md)$/.test file or /\.((lit)?qs|qs\.md)$/.test file
 
 # Determine if a filename represents a Literate CoffeeScript file.
-exports.isLiterate = (file) -> /\.(litcoffee|coffee\.md)$/.test file
+exports.isLiterate = (file) -> /\.(litcoffee|coffee\.md)$/.test file or /\.(litqs|qs\.md)$/.test file
 
 # Throws a SyntaxError from a given location.
 # The error's `toString` will return an error message following the "standard"
