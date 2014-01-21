@@ -744,6 +744,8 @@ COFFEE_ALIAS_MAP =
   'არა'   : 'false'
   'მეტია' : '>'
   'ნაკლებია' : '<'
+  'შეწყვიტე' : 'break'
+  'გამოტოვე' : 'continue'
 
 GEORGIAN_ALIAS_MAP =
   'სანამ' : 'WHILE'
