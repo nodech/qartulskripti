@@ -753,12 +753,12 @@ COFFEE_ALIAS_MAP =
   'გამოტოვე' : 'continue'
 
 GEORGIAN_ALIAS_MAP =
-  'სანამ' : 'WHILE'
-  'მანამ' : 'UNTIL'
-  'როცა'  : 'FOR'
-  'თუ'    : 'IF'
+  'სანამ'   : 'WHILE'
+  'მანამ'   : 'UNTIL'
+  'როცა'    : 'FOR'
+  'თუ'      : 'IF'
   'თუარადა' : 'ELSE'
-  'ზე'    : 'IGNORE'
+  'ზე'      : 'IGNORE'
 
 COFFEE_ALIASES   = (key for key of COFFEE_ALIAS_MAP)
 GEORGIAN_ALIASES = (key for key of GEORGIAN_ALIAS_MAP)
