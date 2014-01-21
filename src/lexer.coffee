@@ -146,7 +146,7 @@ exports.Lexer = class Lexer
       id  = COFFEE_ALIAS_MAP[id] if id in COFFEE_ALIASES
       tag = switch id
         when '!'                 then 'UNARY'
-        when '==', '!='          then 'COMPARE'
+        when '>', '<', '==', '!='          then 'COMPARE'
         when '&&', '||'          then 'LOGIC'
         when 'true', 'false'     then 'BOOL'
         when 'break', 'continue' then 'STATEMENT'
@@ -742,6 +742,8 @@ COFFEE_ALIAS_MAP =
   'არ'    : '!'
   'კი'    : 'true'
   'არა'   : 'false'
+  'მეტია' : '>'
+  'ნაკლებია' : '<'
 
 GEORGIAN_ALIAS_MAP =
   'სანამ' : 'WHILE'
