@@ -145,16 +145,21 @@ exports.Lexer = class Lexer
     unless forcedIdentifier
       id  = COFFEE_ALIAS_MAP[id] if id in COFFEE_ALIASES
       tag = switch id
-        when '!'                 then 'UNARY'
-        when '>', '<', '==', '!='          then 'COMPARE'
-        when '&&', '||'          then 'LOGIC'
-        when 'true', 'false'     then 'BOOL'
-        when 'break', 'continue' then 'STATEMENT'
+        when '!'                   then 'UNARY'
+        when '>', '<', '==', '!='  then 'COMPARE'
+        when '&&', '||'            then 'LOGIC'
+        when 'true', 'false'       then 'BOOL'
+        when 'break', 'continue'   then 'STATEMENT'
         else  tag
+
 
     # Tranlate georgian keywords to LEXER tokens
     if id in GEORGIAN_ALIASES
       tag = GEORGIAN_ALIAS_MAP[id]
+
+      # Stylish words like ZE
+      if tag is 'IGNORE'
+        return id.length
 
     tagToken = @token tag, id, 0, idLength
     if poppedToken
@@ -753,6 +758,7 @@ GEORGIAN_ALIAS_MAP =
   'როცა'  : 'FOR'
   'თუ'    : 'IF'
   'თუარადა' : 'ELSE'
+  'ზე'    : 'IGNORE'
 
 COFFEE_ALIASES   = (key for key of COFFEE_ALIAS_MAP)
 GEORGIAN_ALIASES = (key for key of GEORGIAN_ALIAS_MAP)
