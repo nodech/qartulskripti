@@ -113,6 +113,18 @@ exports.Lexer = class Lexer
       (prev = last @tokens) and (prev[0] in ['.', '?.', '::', '?::'] or
       not prev.spaced and prev[0] is '@')
     tag = 'IDENTIFIER'
+    
+    #geofied = false
+    # Tranlate georgian keywords to LEXER tokens
+    if not forcedIdentifier and id in GEORGIAN_ALIASES
+      tag = GEORGIAN_ALIAS_MAP[id]
+      #geofied = true
+
+      # Stylish words like ZE
+      if tag is 'IGNORE'
+        return id.length
+
+      id = tag.toLowerCase()
 
     if not forcedIdentifier and (id in JS_KEYWORDS or id in COFFEE_KEYWORDS)
       tag = id.toUpperCase()
@@ -151,15 +163,6 @@ exports.Lexer = class Lexer
         when 'true', 'false'       then 'BOOL'
         when 'break', 'continue'   then 'STATEMENT'
         else  tag
-
-
-    # Tranlate georgian keywords to LEXER tokens
-    if id in GEORGIAN_ALIASES
-      tag = GEORGIAN_ALIAS_MAP[id]
-
-      # Stylish words like ZE
-      if tag is 'IGNORE'
-        return id.length
 
     tagToken = @token tag, id, 0, idLength
     if poppedToken
@@ -758,7 +761,11 @@ GEORGIAN_ALIAS_MAP =
   'როცა'    : 'FOR'
   'თუ'      : 'IF'
   'თუარადა' : 'ELSE'
+  'შედის'    : 'IN'
+
+  #style keywords
   'ზე'      : 'IGNORE'
+  'ში'      : 'IGNORE'
 
 COFFEE_ALIASES   = (key for key of COFFEE_ALIAS_MAP)
 GEORGIAN_ALIASES = (key for key of GEORGIAN_ALIAS_MAP)
