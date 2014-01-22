@@ -752,6 +752,7 @@ GEORGIAN_ALIAS_MAP =
   'თუარადა'  : 'ELSE'
   'შედის'    : 'IN'
   'ეკუთვნის' : 'OF'
+
   'და'       : 'and'
   'ან'       : 'or'
   'არის'     : 'is'
@@ -759,10 +760,11 @@ GEORGIAN_ALIAS_MAP =
   'არ'       : 'not'
   'კი'       : 'yes'
   'არა'      : 'no'
-  'შეწყვიტე' : 'break'
-  'გამოტოვე' : 'continue'
   'მეტია'    : '>'
   'ნაკლებია' : '<'
+
+  'შეწყვიტე' : 'break'
+  'გამოტოვე' : 'continue'
 
   #style keywords
   'ზე'      : 'IGNORE'
