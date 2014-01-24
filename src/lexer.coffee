@@ -755,6 +755,7 @@ GEORGIAN_ALIAS_MAP =
   'დააბრუნე' : 'RETURN'
 
   'განუსაზღვრელი' : 'undefined'
+  'წაშალე'   : 'delete'
 
   'და'       : 'and'
   'ან'       : 'or'
