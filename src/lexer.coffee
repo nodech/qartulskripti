@@ -122,7 +122,7 @@ exports.Lexer = class Lexer
 
       # Stylish words like ZE
       თუ tag არის 'IGNORE'
-        return id.length
+        დააბრუნე id.length
 
       id = tag.toLowerCase()
 
@@ -753,6 +753,8 @@ GEORGIAN_ALIAS_MAP =
   'შედის'    : 'IN'
   'ეკუთვნის' : 'OF'
   'დააბრუნე' : 'RETURN'
+
+  'განუსაზღვრელი' : 'undefined'
 
   'და'       : 'and'
   'ან'       : 'or'
