@@ -116,12 +116,12 @@ exports.Lexer = class Lexer
     
     #geofied = false
     # Tranlate georgian keywords to LEXER tokens
-    if not forcedIdentifier and id in GEORGIAN_ALIASES
+    თუ არ forcedIdentifier და id შედის GEORGIAN_ALIASES ში
       tag = GEORGIAN_ALIAS_MAP[id]
       #geofied = true
 
       # Stylish words like ZE
-      if tag is 'IGNORE'
+      თუ tag არის 'IGNORE'
         return id.length
 
       id = tag.toLowerCase()
@@ -752,6 +752,7 @@ GEORGIAN_ALIAS_MAP =
   'თუარადა'  : 'ELSE'
   'შედის'    : 'IN'
   'ეკუთვნის' : 'OF'
+  'დააბრუნე' : 'RETURN'
 
   'და'       : 'and'
   'ან'       : 'or'
