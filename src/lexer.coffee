@@ -745,6 +745,8 @@ COFFEE_ALIAS_MAP =
   off  : 'false'
 
 GEORGIAN_ALIAS_MAP =
+  'განუსაზღვრელი' : 'undefined'
+
   'სანამ'    : 'WHILE'
   'მანამ'    : 'UNTIL'
   'როცა'     : 'FOR'
@@ -753,9 +755,8 @@ GEORGIAN_ALIAS_MAP =
   'შედის'    : 'IN'
   'ეკუთვნის' : 'OF'
   'დააბრუნე' : 'RETURN'
-
-  'განუსაზღვრელი' : 'undefined'
   'წაშალე'   : 'delete'
+
 
   'და'       : 'and'
   'ან'       : 'or'
