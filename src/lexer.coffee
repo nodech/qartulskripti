@@ -773,8 +773,9 @@ GEORGIAN_ALIAS_MAP =
   'გამოტოვე' : 'continue'
 
   #style keywords
-  'ზე'      : 'IGNORE'
-  'ში'      : 'IGNORE'
+  'ზე' : 'IGNORE'
+  'ში' : 'IGNORE'
+  'ს'  : 'IGNORE'
 
 COFFEE_ALIASES   = (key for key of COFFEE_ALIAS_MAP)
 GEORGIAN_ALIASES = (key for key of GEORGIAN_ALIAS_MAP)
