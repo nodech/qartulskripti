@@ -758,6 +758,7 @@ GEORGIAN_ALIAS_MAP =
   'წაშალე'   : 'delete'
 
 
+  'მაშინ'    : 'then'
   'და'       : 'and'
   'ან'       : 'or'
   'არის'     : 'is'
