@@ -113,6 +113,18 @@ exports.Lexer = class Lexer
       (prev = last @tokens) and (prev[0] in ['.', '?.', '::', '?::'] or
       not prev.spaced and prev[0] is '@')
     tag = 'IDENTIFIER'
+    
+    #geofied = false
+    # Tranlate georgian keywords to LEXER tokens
+    თუ არ forcedIdentifier და id შედის GEORGIAN_ALIASES ში
+      tag = GEORGIAN_ALIAS_MAP[id]
+      #geofied = true
+
+      # Stylish words like ZE
+      თუ tag არის 'IGNORE'
+        დააბრუნე id.length
+
+      id = tag.toLowerCase()
 
     if not forcedIdentifier and (id in JS_KEYWORDS or id in COFFEE_KEYWORDS)
       tag = id.toUpperCase()
@@ -145,16 +157,12 @@ exports.Lexer = class Lexer
     unless forcedIdentifier
       id  = COFFEE_ALIAS_MAP[id] if id in COFFEE_ALIASES
       tag = switch id
-        when '!'                 then 'UNARY'
-        when '==', '!='          then 'COMPARE'
-        when '&&', '||'          then 'LOGIC'
-        when 'true', 'false'     then 'BOOL'
-        when 'break', 'continue' then 'STATEMENT'
+        when '!'                   then 'UNARY'
+        when '>', '<', '==', '!='  then 'COMPARE'
+        when '&&', '||'            then 'LOGIC'
+        when 'true', 'false'       then 'BOOL'
+        when 'break', 'continue'   then 'STATEMENT'
         else  tag
-
-    # Tranlate georgian keywords to LEXER tokens
-    if id in GEORGIAN_ALIASES
-      tag = GEORGIAN_ALIAS_MAP[id]
 
     tagToken = @token tag, id, 0, idLength
     if poppedToken
@@ -737,7 +745,37 @@ COFFEE_ALIAS_MAP =
   off  : 'false'
 
 GEORGIAN_ALIAS_MAP =
-  'სანამ' : 'WHILE'
+  'განუსაზღვრელი' : 'undefined'
+
+  'სანამ'    : 'WHILE'
+  'მანამ'    : 'UNTIL'
+  'როცა'     : 'FOR'
+  'თუ'       : 'IF'
+  'თუარადა'  : 'ELSE'
+  'შედის'    : 'IN'
+  'ეკუთვნის' : 'OF'
+  'დააბრუნე' : 'RETURN'
+  'წაშალე'   : 'delete'
+
+
+  'მაშინ'    : 'then'
+  'და'       : 'and'
+  'ან'       : 'or'
+  'არის'     : 'is'
+  'არარის'   : 'isnt'
+  'არ'       : 'not'
+  'კი'       : 'yes'
+  'არა'      : 'no'
+  'მეტია'    : '>'
+  'ნაკლებია' : '<'
+
+  'შეწყვიტე' : 'break'
+  'გამოტოვე' : 'continue'
+
+  #style keywords
+  'ზე' : 'IGNORE'
+  'ში' : 'IGNORE'
+  'ს'  : 'IGNORE'
 
 COFFEE_ALIASES   = (key for key of COFFEE_ALIAS_MAP)
 GEORGIAN_ALIASES = (key for key of GEORGIAN_ALIAS_MAP)
