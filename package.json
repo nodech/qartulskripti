@@ -19,9 +19,12 @@
   "scripts": {
     "test": "node ./bin/cake test"
   },
-  "bugs":         "https://github.com/nodar-chkuaselidze/qartulskripti",
+  "bugs":         "https://github.com/nodar-chkuaselidze/qartulskripti/issues",
   "homepage":     "https://nodar-chkuaselidze.github.io/qartulskripti/",
-  "repository" :  { "type" : "git", "url" : "git@github.com:nodar-chkuaselidze/qartulskripti.git" },
+  "repository" :  {
+    "type" : "git",
+    "url" : "https://github.com/nodar-chkuaselidze/qartulskripti"
+  },
   "devDependencies": {
     "uglify-js":  "~2.2",
     "jison":      ">=0.2.0"
