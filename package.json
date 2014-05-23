@@ -13,13 +13,15 @@
   },
   "main" : "./lib/coffee-script/coffee-script",
   "bin":          {
-    "coffee":     "./bin/qartulskripti",
+    "qartulskripti":     "./bin/qartulskripti",
     "cake":       "./bin/cake"
   },
   "scripts": {
     "test": "node ./bin/cake test"
   },
   "bugs":         "https://github.com/nodar-chkuaselidze/qartulskripti",
+  "homepage":     "https://nodar-chkuaselidze.github.io/qartulskripti/",
+  "repository" :  { "type" : "git", "url" : "git@github.com:nodar-chkuaselidze/qartulskripti.git" },
   "devDependencies": {
     "uglify-js":  "~2.2",
     "jison":      ">=0.2.0"
