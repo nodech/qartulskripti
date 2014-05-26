@@ -284,3 +284,9 @@ Error.prepareStackTrace = (err, stack) ->
 
   "#{err.name}: #{err.message ? ''}\n#{frames.join '\n'}\n"
 
+exports.evil         = exports.eval
+
+# ქართული ალტერნატივები
+exports.დააკომპილირე = exports.compile
+exports.შეასრულე     = exports.run
+exports.ბოროტება     = exports.evil
