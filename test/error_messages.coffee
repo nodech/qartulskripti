@@ -41,26 +41,27 @@ test "compiler error formatting", ->
                  ^^^^
   '''
 
-test "patchStackTrace line patching", ->
-  err = new Error 'error'
-  ok err.stack.match /test[\/\\]error_messages\.coffee:\d+:\d+\b/
+if require?
+  test "patchStackTrace line patching", ->
+    err = new Error 'error'
+    ok err.stack.match /test[\/\\]error_messages\.coffee:\d+:\d+\b/
 
-fs   = require 'fs'
-path = require 'path'
+  fs   = require 'fs'
+  path = require 'path'
 
-test "#2849: compilation error in a require()d file", ->
-  # Create a temporary file to require().
-  ok not fs.existsSync 'test/syntax-error.coffee'
-  fs.writeFileSync 'test/syntax-error.coffee', 'foo in bar or in baz'
+  test "#2849: compilation error in a require()d file", ->
+    # Create a temporary file to require().
+    ok not fs.existsSync 'test/syntax-error.coffee'
+    fs.writeFileSync 'test/syntax-error.coffee', 'foo in bar or in baz'
 
-  try
-    assertErrorFormat '''
-      require './test/syntax-error'
-    ''',
-    """
-      #{path.join __dirname, 'syntax-error.coffee'}:1:15: error: unexpected RELATION
-      foo in bar or in baz
-                    ^^
-    """
-  finally
-    fs.unlink 'test/syntax-error.coffee'
+    try
+      assertErrorFormat '''
+        require './test/syntax-error'
+      ''',
+      """
+        #{path.join __dirname, 'syntax-error.coffee'}:1:15: error: unexpected RELATION
+        foo in bar or in baz
+                      ^^
+      """
+    finally
+      fs.unlink 'test/syntax-error.coffee'
