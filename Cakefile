@@ -112,6 +112,7 @@ task 'build:browser', 'rebuild the merged script for inclusion in the browser', 
         define(function() { return CoffeeScript; });
       } else {
         root.CoffeeScript = CoffeeScript;
+        root.qartulskripti = CoffeeScript;
       }
     }(this));
   """
