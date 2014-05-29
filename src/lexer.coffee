@@ -113,7 +113,7 @@ exports.Lexer = class Lexer
       (prev = last @tokens) and (prev[0] in ['.', '?.', '::', '?::'] or
       not prev.spaced and prev[0] is '@')
     tag = 'IDENTIFIER'
-    
+
     #geofied = false
     # Tranlate georgian keywords to LEXER tokens
     თუ არ forcedIdentifier და id შედის GEORGIAN_ALIASES ში
@@ -757,6 +757,11 @@ GEORGIAN_ALIAS_MAP =
   'დააბრუნე' : 'RETURN'
   'წაშალე'   : 'delete'
 
+  'ახალი'    : 'new',
+  'ტიპი'     : 'typeof'
+
+  'შეამოწმე' : 'switch'
+  'როდესაც'  : 'when'
 
   'მაშინ'    : 'then'
   'და'       : 'and'
