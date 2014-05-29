@@ -772,6 +772,10 @@ GEORGIAN_ALIAS_MAP =
   'შეწყვიტე' : 'break'
   'გამოტოვე' : 'continue'
 
+  'ცადე'     : 'TRY'
+  'დაიჭირე'  : 'CATCH'
+  'საბოლოოდ' : 'FINALLY'
+
   #style keywords
   'ზე' : 'IGNORE'
   'ში' : 'IGNORE'
