@@ -113,12 +113,13 @@ task 'build:browser', 'rebuild the merged script for inclusion in the browser', 
       } else {
         root.CoffeeScript = CoffeeScript;
         root.qartulskripti = CoffeeScript;
+        root.ქართულსკრიპტი = root.qartulskripti;
       }
     }(this));
   """
   unless process.env.MINIFY is 'false'
     {code} = require('uglify-js').minify code, fromString: true
-  fs.writeFileSync 'extras/coffee-script.js', header + '\n' + code
+  fs.writeFileSync 'extras/qartulskripti.js', header + '\n' + code
   console.log "built ... running browser tests:"
   invoke 'test:browser'
 
