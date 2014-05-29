@@ -1027,6 +1027,8 @@ exports.Class = class Class extends Base
         base = assign.variable.base
         delete assign.context
         func = assign.value
+        if base.value is 'კონსტრუქტორი'
+          base.value = 'constructor'
         if base.value is 'constructor'
           if @ctor
             assign.error 'cannot define more than one constructor in a class'
