@@ -781,6 +781,10 @@ GEORGIAN_ALIAS_MAP =
   'დაიჭირე'  : 'CATCH'
   'საბოლოოდ' : 'FINALLY'
 
+  'კლასი'     : 'CLASS'
+  'მემკვიდრეა': 'EXTENDS'
+  'წინაპარი'  : 'SUPER'
+
   #style keywords
   'ზე' : 'IGNORE'
   'ში' : 'IGNORE'
