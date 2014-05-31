@@ -784,6 +784,7 @@ GEORGIAN_ALIAS_MAP =
   'კლასი'     : 'CLASS'
   'მემკვიდრეა': 'EXTENDS'
   'წინაპარი'  : 'SUPER'
+  'ეს'        : 'this'
 
   #style keywords
   'ზე' : 'IGNORE'
