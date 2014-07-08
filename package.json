@@ -14,8 +14,7 @@
   },
   "main" : "./lib/coffee-script/coffee-script",
   "bin":          {
-    "qartulskripti":     "./bin/qartulskripti",
-    "cake":       "./bin/cake"
+    "qartulskripti":     "./bin/qartulskripti"
   },
   "scripts": {
     "test": "node ./bin/cake test"
