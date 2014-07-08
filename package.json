@@ -1,7 +1,8 @@
 {
   "name":         "qartulskripti",
-  "description":  "ქართულსკრიპტი -> Javascript",
+  "description":  "node.js module that converts code from ქართულსკრიპტი to Javascript",
   "keywords":     ["javascript", "language", "qartulskripti", "ქართულსკრიპტი", "compiler"],
+  "preferGlobal": true,
   "author":       "Nodari Chkuaselidze",
   "version":      "1.0.0",
   "license":      "MIT",
