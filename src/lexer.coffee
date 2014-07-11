@@ -788,6 +788,7 @@ GEORGIAN_ALIAS_MAP =
   'ეს'        : 'this'
 
   #style keywords
+  'ით' : 'IGNORE'
   'ზე' : 'IGNORE'
   'ში' : 'IGNORE'
   'ს'  : 'IGNORE'
