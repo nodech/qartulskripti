@@ -747,6 +747,7 @@ COFFEE_ALIAS_MAP =
 GEORGIAN_ALIAS_MAP =
   'განუსაზღვრელი' : 'undefined'
 
+  'იზრდება'  : 'BY'
   'სანამ'    : 'WHILE'
   'მანამ'    : 'UNTIL'
   'როცა'     : 'FOR'
