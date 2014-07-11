@@ -7,3 +7,10 @@
 
 
 ეს ვერსია ქართულ-სკრიპტის დაშენებულია [Coffee Script](http://coffeescript.org/ "Coffee Script") -ზე.
+
+[ენის შესახებ](http://nodar-chkuaselidze.github.io/qartulskripti/ "ქარტულსკრიპტი")
+=====
+
++ საიტზე კომპილირება
++ ინფორმაცია ენის შესახებ
++ კოდის მაგალითები
