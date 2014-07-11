@@ -410,4 +410,4 @@ usage = ->
 
 # Print the `--version` message and exit.
 version = ->
-  printLine "CoffeeScript version #{CoffeeScript.VERSION}"
+  printLine "QartulSkripti version #{CoffeeScript.VERSION}"
