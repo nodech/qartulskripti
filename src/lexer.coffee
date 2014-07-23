@@ -757,8 +757,10 @@ GEORGIAN_ALIAS_MAP =
   'ეკუთვნის' : 'OF'
   'დააბრუნე' : 'RETURN'
   'წაშალე'   : 'delete'
+  'შეასრულე' : 'DO'
+  'ნიმუშია'  : 'instanceof'
 
-  'ახალი'    : 'new',
+  'ახალი'    : 'new'
   'ტიპი'     : 'typeof'
 
   'შეამოწმე' : 'switch'
